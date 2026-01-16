@@ -1,0 +1,14 @@
+<div style="display: flex; flex-wrap: wrap; gap: 16px;">
+  <% if(tareas && tareas.length > 0) { %>
+      <% tareas.forEach((tarea) => { %>
+        <div style="border: 1px solid #ccc; padding: 16px; border-radius: 8px; width: 300px; background-color: #fff;">
+            <h3><%= tarea.titulo %></h3>
+            <p><strong>Descripción:</strong> <%= tarea.descripcion %></p>
+            <p><small>Fecha: <%= new Date(tarea.fecha_creacion).toLocaleDateString() %></small></p>
+            <p>Estado: <%= tarea.completada ? 'Completada' : 'Pendiente' %></p>
+        </div>
+      <% }); %>
+  <% } else { %>
+      <p>No tienes tareas pendientes.</p>
+  <% } %>
+</div>
