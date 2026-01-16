@@ -1,0 +1,9 @@
+header, footer {
+    background-color: orange;
+}
+
+body {
+  display: grid;
+  min-height: 100vh;
+  grid-template-rows: auto 1fr auto;
+}
